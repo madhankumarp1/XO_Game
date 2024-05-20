@@ -1,0 +1,361 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #e8dfcb; */
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    background-image: url(./src/bg_3.jpg);
+    background-size: 100% 100%;
+}
+.con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    height: 48%;
+
+}
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    border-color: #3d4c54;
+    width: 315px; /* 3 cells per row with gaps */
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.877);
+    border: 10px solid #000;
+    font-size: 2em;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* fontstyle */
+.cell {
+    font-family: fantasy;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
+.answer {
+    /* margin-top: 20px; */
+    margin: 0;
+    font-size: 1.2em;
+    color: aliceblue;
+    font-size: x-large;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+#reset {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 0;
+    /* background: azure; */
+}
+
+
+
+#party-info,#confetti{
+    display: none;
+}
+
+
+
+
+
+/* next_div */
+
+#confetti {
+    position: relative;
+    top:0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  /* #party-info { */
+    /* position: absolute; */
+    /* background: rgba(255,255,255,1);
+    box-shadow: 10px 10px 10px rgba(255,255,255,0.8);
+    padding: 20px; */
+    /* margin: 0 auto;
+    height: 200px;
+    margin-top: -100px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom:0;
+    text-align: center; */
+    /* width: 400px; */
+    /* z-index: 2;
+    color: gray; */
+  /* } */
+
+  #party-info {
+    background: rgba(255,255,255,1);
+    box-shadow: 10px 10px 10px rgba(255,255,255,0.8);
+    padding: 20px;
+    z-index: 2;
+    color: gray;
+    width: 25%;
+    height:30% ;
+    position: absolute;
+  }
+
+
+.next-game {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: monospace;
+    font-size: x-large;
+}
+
+h3{
+    text-align: center;
+    font-family: monospace;
+    font-size: large;
+}
+
+/* button style */
+
+button {
+    position: relative;
+    width: 11em;
+    height: 4em;
+    outline: none;
+    transition: 0.1s;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ddebf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #clip {
+    --color: #2761c3;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 5px double var(--color);
+    box-shadow: inset 0px 0px 15px #195480;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+  
+  .arrow {
+    position: absolute;
+    transition: 0.2s;
+    background-color: #2761c3;
+    top: 45%;
+    width: 11%;
+    height: 30%;
+}
+#leftArrow {
+    left: -20.5%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  }
+  
+  
+  #rightArrow {
+    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+    left: 110%;
+  }
+  
+  button:hover #rightArrow {
+    background-color: #27c39f;
+    left: -15%;
+    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+  }
+  
+  button:hover #leftArrow {
+    background-color: #27c39f;
+    left: 103%;
+    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+  }
+  
+  .corner {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: #2761c3;
+    box-shadow: inset 1px 1px 8px #2781c3;
+    transform: scale(1) rotate(45deg);
+    transition: 0.2s;
+  }
+  
+  #rightTop {
+    top: -1.98em;
+    left: 91%;
+  }
+  
+  #leftTop {
+    top: -1.96em;
+    left: -3.0em;
+  }
+  
+  #leftBottom {
+    top: 2.10em;
+    left: -2.15em;
+  }
+  
+  #rightBottom {
+    top: 45%;
+    left: 88%;
+  }
+  
+  button:hover #leftTop {
+    animation: 0.1s ease-in-out 0.05s both changeColor8,
+    0.2s linear 0.4s both lightEffect8;
+  }
+  
+  button:hover #rightTop {
+    animation: 0.1s ease-in-out 0.15s both changeColor8,
+    0.2s linear 0.4s both lightEffect8;
+  }
+  
+  button:hover #rightBottom {
+    animation: 0.1s ease-in-out 0.25s both changeColor8,
+    0.2s linear 0.4s both lightEffect8;
+  }
+  
+  button:hover #leftBottom {
+    animation: 0.1s ease-in-out 0.35s both changeColor8,
+    0.2s linear 0.4s both lightEffect8;
+  }
+  
+  button:hover .corner {
+    transform: scale(1.25) rotate(45deg);
+  }
+  
+  button:hover #clip {
+    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    --color: #27c39f;
+  }
+  
+  @keyframes changeColor8 {
+    from {
+      background-color: #2781c3;
+    }
+  
+    to {
+      background-color: #27c39f;
+    }
+  }
+  
+  @keyframes lightEffect8 {
+    from {
+      box-shadow: 1px 1px 5px #27c39f;
+    }
+  
+    to {
+      box-shadow: 0 0 2px #27c39f;
+    }
+  }
+  
+  @keyframes greenLight8 {
+    from {
+    }
+  
+    to {
+      box-shadow: inset 0px 0px 32px #27c39f;
+    }
+  }
+  
+  @keyframes leftArrow8 {
+    from {
+      transform: translate(0px);
+    }
+  
+    to {
+      transform: translateX(10px);
+    }
+  }
+  
+  @keyframes rightArrow8 {
+    from {
+      transform: translate(0px);
+    }
+  
+    to {
+      transform: translateX(-10px);
+    }
+  }
+  
+  /* next button style */
+
+  .btn {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 10px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+   }
+   
+   .btn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+   }
+   
+   .btn:hover {
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+   }
+   
+   .btn:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+   }
+   
+   .btn:active {
+    transform: scale(0.9);
+   }
+  
+
+   /*  */
+
+   #canvas{
+    display: none;
+   }
