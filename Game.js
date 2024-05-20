@@ -121,7 +121,7 @@ allCards.forEach((card) => {
     card.addEventListener('click', () => {
         if (gameActive && card.textContent.trim() === '') {
             card.textContent = currentPlayer;
-
+            document.getElementById("audioPlayer2").play();
             if (currentPlayer === 'X') {
                  card.style.backgroundColor = 'yellow';
 
