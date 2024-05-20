@@ -126,7 +126,7 @@ allCards.forEach((card) => {
                  card.style.backgroundColor = 'yellow';
 
             } else {
-                card.style.backgroundColor = 'red';
+                card.style.backgroundColor = 'orangered';
 
             }
             // Check for winner
