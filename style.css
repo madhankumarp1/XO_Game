@@ -140,6 +140,12 @@ h3{
     font-size: large;
 }
 
+
+/* cell  color*/
+
+.cell {
+    color: navy;
+}
 /* button style */
 
 button {
