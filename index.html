@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> TIC-TAC-TOE Game</title>
+    <link rel="icon" type="image/x-icon" href="./src/game_image.jpg">
+</head>
+<body>
+    <div class="con" id="con">
+
+    <div class="container">
+        <div class="board" id="board">
+            <div class="cell" ></div>
+            <div class="cell" ></div>
+            <div class="cell" ></div>
+            <div class="cell" ></div>
+            <div class="cell" ></div>
+            <div class="cell" ></div>
+            <div class="cell" ></div>
+            <div class="cell" ></div>
+            <div class="cell" ></div>
+        </div>
+        <div class="answer" id="answer">Player X's turn</div>
+        <div class="reset" id="reset">
+            <button id="rest">
+                R E S E T
+                <div id="clip">
+                    <div id="leftTop" class="corner"></div>
+                    <div id="rightBottom" class="corner"></div>
+                    <div id="rightTop" class="corner"></div>
+                    <div id="leftBottom" class="corner"></div>
+                </div>
+                <span id="rightArrow" class="arrow"></span>
+                <span id="leftArrow" class="arrow"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="win_result" id="win_result">
+    <h1>hello</h1>
+</div> -->
+<canvas id="canvas"></canvas>
+
+<div id="party-info">
+
+  <h2 id="answe_next_head">congratulations  you win!!</h2>
+
+  <h3 id="answe_next"></h3>
+
+  <!-- next game  -->
+  <div class="next-game">
+    <button class="btn" id="nextgame"> NEXT GAME
+    </button>
+  </div>
+
+</div>
+</body>
+
+<script src="Game.js"></script>
+</html>
